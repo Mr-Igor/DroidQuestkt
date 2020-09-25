@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DroidQuestkt</string>
+    <string name="question_android">ОС Android основана на ядре Linux?</string>
+    <string name="question_linear">Разметка LinearLayout позиционирует свои дочерние элементы в строки и столбцы.</string>
+    <string name="question_service">Компонент Android-приложения Service предоставляют доступ к данным.</string>
+    <string name="question_res">Ресурсы приложения содержатся в отдельном файле XML.</string>
+    <string name="question_manifest">AndroidManifest.xml предоставляет системе основную информацию о программе.</string>
+    <string name="true_button"> Да</string>
+    <string name="false_button">Нет</string>
+    <string name="correct_toast">Верно</string>
+    <string name="incorrect_toast">Не верно</string>
+    <string name="next_button">Далее</string>
+    <string name="action_settings">Settings</string>
+    <string name="warning_text">Вы уверены, что хотите это сделать?</string>
+    <string name="show_answer_button">Показать ответ</string>
+    <string name="deceit_button">Обмануть !</string>
+    <string name="judgment_toast">Обманывать нельзя.</string>
+</resources>
