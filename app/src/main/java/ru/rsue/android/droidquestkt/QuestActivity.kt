@@ -1,7 +1,7 @@
 package ru.rsue.android.droidquestkt
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -68,12 +68,14 @@ class QuestActivity : AppCompatActivity() {
         mBackButton = findViewById(R.id.back_button)
         mBackButton.setOnClickListener {
             mCurrentIndex = (mCurrentIndex + 9) % mQuestionBank.size
+            mIsDeceiter = false
             updateQuestion()
         }
 
         mQuestionTextView = findViewById(R.id.question_text_view)
         mQuestionTextView.setOnClickListener {
             mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.size
+            mIsDeceiter = false
             updateQuestion()
         }
 
@@ -106,9 +108,9 @@ class QuestActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
         Log.i(TAG, "onSaveInstanceState")
-        outState.putInt(KEY_INDEX, mCurrentIndex)
-        outState.putBoolean(KEY_INDEX_TWO, mIsDeceiter)
-        outState.putBooleanArray(KEY_INDEX_QUESTION, mUsedHint)
+        outState?.putInt(KEY_INDEX, mCurrentIndex)
+        outState?.putBoolean(KEY_INDEX_TWO, mIsDeceiter)
+        outState?.putBooleanArray(KEY_INDEX_QUESTION, mUsedHint)
     }
 
     private fun updateQuestion() {
