@@ -1,6 +1,6 @@
 package ru.rsue.android.droidquestkt
 
 data class Question(
-    val textResId: int,
+    val textResId: Int,
     val answerTrue: Boolean
 )
