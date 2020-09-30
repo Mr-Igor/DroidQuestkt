@@ -36,10 +36,12 @@ class DeceitActivity : AppCompatActivity(){
 
         if (savedInstanceState != null) mIsDeceiter = savedInstanceState.getBoolean(KEY_INDEX)
         if (mIsDeceiter)
+            mAnswerTextView = findViewById(R.id.answer_text_view)
             mAnswerTextView?.setText(
                 if (mAnswerIsTrue) R.string.true_button
-                else R.string.false_button
+                else R.string.false_button)
             )
+        else mAnswerTextView?.setText("")
 
         setAnswerShownResult(true)
 
